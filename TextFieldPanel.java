@@ -35,6 +35,14 @@ public class TextFieldPanel extends JPanel implements MouseListener
         String [] grade = {"1학년", "2학년", "3학년"};
         JComboBox<String> cbSchoolYear = new JComboBox<String>(grade);
         this.add(cbSchoolYear);
+        
+        JButton btn1 = new JButton("추가");
+        JButton btn2 = new JButton("Clear");
+        this.add(btn1);
+        this.add(btn2);
+        
+        JTextArea ta = new JTextArea(10, 24);
+        this.add(ta);
     }
     
     public void mouseClicked(MouseEvent e){}

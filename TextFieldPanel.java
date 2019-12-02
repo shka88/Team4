@@ -1,5 +1,6 @@
 import javax.swing.*;
-
+import javax.swing.event.*;
+import java.awt.*;
 /**
  * 여기에 TextFieldPanel 클래스 설명을 작성하십시오.
  * 
@@ -10,6 +11,7 @@ public class TextFieldPanel extends JPanel
 {
     JTextField mtfName,mtfDept,mtfAddress;
     JLabel mlName, mlDept, mlAddress;
+    JComboBox mlSchoolYear;
     public TextFieldPanel(){
         mlName = new JLabel("이름");
         this.add(mlName);
@@ -25,6 +27,8 @@ public class TextFieldPanel extends JPanel
         this.add(mlAddress);
         mtfAddress = new JTextField("서울시...",20);
         this.add(mtfAddress);
-
+        
+        // mlSchoolYear = new JComboBox();
+        // this.add(mlSchoolYear);
     }
 }

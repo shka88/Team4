@@ -8,7 +8,7 @@ import java.awt.event.*;
  * @author (작성자 이름) 
  * @version (버전번호나 날짜)
  */
-public class TextFieldPanel extends JPanel implements MouseListener
+public class TextFieldPanel extends JPanel implements ActionListener
 {
     JTextField mtfName,mtfDept,mtfAddress;
     JLabel mlName, mlDept, mlAddress, mlSchoolYear;
@@ -45,10 +45,7 @@ public class TextFieldPanel extends JPanel implements MouseListener
         this.add(ta);
     }
     
-    public void mouseClicked(MouseEvent e){}
-    public void mouseEntered(MouseEvent e){}
-    public void mouseExited(MouseEvent e){}
-    public void mousePressed(MouseEvent e){}
-    public void mouseReleased(MouseEvent e){}
+    public void actionPerformed(ActionEvent e){}
+    
     
 }

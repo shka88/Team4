@@ -14,7 +14,7 @@ public class TextFieldPanel extends JPanel implements ActionListener
     JLabel mlName, mlDept, mlAddress, mlSchoolYear;
     JComboBox cbSchoolYear;
     JTextArea ta;
-    
+    JButton btn1,btn2;
     public TextFieldPanel(){
         mlName = new JLabel("이름");
         this.add(mlName);
@@ -38,6 +38,7 @@ public class TextFieldPanel extends JPanel implements ActionListener
         JComboBox<String> cbSchoolYear = new JComboBox<String>(grade);
         this.add(cbSchoolYear);
         
+        
         JButton btn1 = new JButton("추가");
         JButton btn2 = new JButton("Clear");
         this.add(btn1);
@@ -45,19 +46,34 @@ public class TextFieldPanel extends JPanel implements ActionListener
         
         ta = new JTextArea(10, 24);
         this.add(ta);
-       
+        
+        btn1.addActionListener(this);
         
     }
     
     public void actionPerformed(ActionEvent e){
+        JButton btn1 = (JButton)e.getSource();
+        
         ta.append(mlName.getText() + " : ");
         ta.append(mtfName.getText() + " \n ");
         ta.append(mlDept.getText() + " : ");
         ta.append(mtfDept.getText() + " \n ");
         ta.append(mlSchoolYear.getText() + " : ");
-        //ta.append(cbSchoolYear.get() + " \n ");
+        ta.append(cbSchoolYear.getList() + " \n ");
         ta.append(mlAddress.getText() + " : ");
         ta.append(mtfAddress.getText() + " \n ");
+        ta.append("-------------------------- ");
+        
+        
+        JButton btn2 = (JButton)e.getSource();
+        mlName.setText("");
+        mtfName.setText("");
+        mlDept.setText("");
+        mtfDept.setText("");
+        mlSchoolYear.setText("");
+        mlAddress.setText("");
+        mtfAddress.setText("");
+        
     }
     
     

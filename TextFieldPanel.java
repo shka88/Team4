@@ -13,6 +13,8 @@ public class TextFieldPanel extends JPanel implements ActionListener
     JTextField mtfName,mtfDept,mtfAddress;
     JLabel mlName, mlDept, mlAddress, mlSchoolYear;
     JComboBox cbSchoolYear;
+    JTextArea ta;
+    
     public TextFieldPanel(){
         mlName = new JLabel("이름");
         this.add(mlName);
@@ -41,11 +43,15 @@ public class TextFieldPanel extends JPanel implements ActionListener
         this.add(btn1);
         this.add(btn2);
         
-        JTextArea ta = new JTextArea(10, 24);
+        ta = new JTextArea(10, 24);
         this.add(ta);
+       
+        
     }
     
-    public void actionPerformed(ActionEvent e){}
+    public void actionPerformed(ActionEvent e){
+        ta.append(mlName.getText() + "\n");
+    }
     
     
 }

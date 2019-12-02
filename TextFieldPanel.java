@@ -10,27 +10,29 @@ import java.awt.*;
 public class TextFieldPanel extends JPanel
 {
     JTextField mtfName,mtfDept,mtfAddress;
-    JLabel mlName, mlDept, mlAddress;
-    JComboBox mlSchoolYear;
+    JLabel mlName, mlDept, mlAddress, mlSchoolYear;
+    JComboBox cbSchoolYear;
     public TextFieldPanel(){
         mlName = new JLabel("이름");
         this.add(mlName);
-        mtfName = new JTextField(" ",20);
+        mtfName = new JTextField(" ",17);
         this.add(mtfName);
         
         mlDept = new JLabel("학과");
         this.add(mlDept);
-        mtfDept = new JTextField("글로벌소프트웨어",20);
+        mtfDept = new JTextField("글로벌소프트웨어",17);
         this.add(mtfDept);
         
         mlAddress = new JLabel("주소");
         this.add(mlAddress);
-        mtfAddress = new JTextField("서울시...",20);
+        mtfAddress = new JTextField("서울시...",17);
         this.add(mtfAddress);
         
+        mlSchoolYear = new JLabel("학번");
+        this.add(mlSchoolYear);
+        
         String [] grade = {"1학년", "2학년", "3학년"};
-        JComboBox<String> strCombo = new JComboBox<String>(grade);
-        // mlSchoolYear = new JComboBox();
-        // this.add(mlSchoolYear);
+        JComboBox<String> cbSchoolYear = new JComboBox<String>(grade);
+        this.add(cbSchoolYear);
     }
 }

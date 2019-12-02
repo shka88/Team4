@@ -1,13 +1,14 @@
 import javax.swing.*;
 import javax.swing.event.*;
 import java.awt.*;
+import java.awt.event.*;
 /**
  * 여기에 TextFieldPanel 클래스 설명을 작성하십시오.
  * 
  * @author (작성자 이름) 
  * @version (버전번호나 날짜)
  */
-public class TextFieldPanel extends JPanel
+public class TextFieldPanel extends JPanel implements MouseListener
 {
     JTextField mtfName,mtfDept,mtfAddress;
     JLabel mlName, mlDept, mlAddress, mlSchoolYear;
@@ -35,4 +36,11 @@ public class TextFieldPanel extends JPanel
         JComboBox<String> cbSchoolYear = new JComboBox<String>(grade);
         this.add(cbSchoolYear);
     }
+    
+    public void mouseClicked(MouseEvent e){}
+    public void mouseEntered(MouseEvent e){}
+    public void mouseExited(MouseEvent e){}
+    public void mousePressed(MouseEvent e){}
+    public void mouseReleased(MouseEvent e){}
+    
 }

@@ -28,6 +28,8 @@ public class TextFieldPanel extends JPanel
         mtfAddress = new JTextField("서울시...",20);
         this.add(mtfAddress);
         
+        String [] grade = {"1학년", "2학년", "3학년"};
+        JComboBox<String> strCombo = new JComboBox<String>(grade);
         // mlSchoolYear = new JComboBox();
         // this.add(mlSchoolYear);
     }

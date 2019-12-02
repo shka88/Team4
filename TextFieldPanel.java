@@ -34,7 +34,7 @@ public class TextFieldPanel extends JPanel implements ActionListener
         mlSchoolYear = new JLabel("학번");
         this.add(mlSchoolYear);
         
-        String [] grade = {"1학년", "2학년", "3학년"};
+        String [] grade = {"1학년", "2학년", "3학년","4학년"};
         JComboBox<String> cbSchoolYear = new JComboBox<String>(grade);
         this.add(cbSchoolYear);
         
@@ -50,7 +50,14 @@ public class TextFieldPanel extends JPanel implements ActionListener
     }
     
     public void actionPerformed(ActionEvent e){
-        ta.append(mlName.getText() + "\n");
+        ta.append(mlName.getText() + " : ");
+        ta.append(mtfName.getText() + " \n ");
+        ta.append(mlDept.getText() + " : ");
+        ta.append(mtfDept.getText() + " \n ");
+        ta.append(mlSchoolYear.getText() + " : ");
+        //ta.append(cbSchoolYear.get() + " \n ");
+        ta.append(mlAddress.getText() + " : ");
+        ta.append(mtfAddress.getText() + " \n ");
     }
     
     
